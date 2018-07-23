@@ -20,7 +20,7 @@
 
 # Set branch to install develop / default: master
 if [ -z "${BRANCH}" ]; then
-    BRANCH='master'
+    BRANCH='develop'
 fi
 
 FS_CONF_PATH=https://raw.github.com/newfies-dialer/newfies-dialer/$BRANCH/install/freeswitch-conf
