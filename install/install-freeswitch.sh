@@ -15,7 +15,7 @@
 
 #
 # To download and run the script on your server :
-# cd /usr/src/ ; rm install-freeswitch.sh ; wget --no-check-certificate https://raw.github.com/newfies-dialer/newfies-dialer/develop/install/install-freeswitch.sh ; chmod +x install-freeswitch.sh ; ./install-freeswitch.sh
+# cd /usr/src/ ; rm install-freeswitch.sh ; wget --no-check-certificate https://raw.github.com/13927729580/newfies-dialer/develop/install/install-freeswitch.sh ; chmod +x install-freeswitch.sh ; ./install-freeswitch.sh
 #
 
 # Set branch to install develop / default: master
@@ -23,8 +23,8 @@ if [ -z "${BRANCH}" ]; then
     BRANCH='develop'
 fi
 
-FS_CONF_PATH=https://raw.github.com/newfies-dialer/newfies-dialer/$BRANCH/install/freeswitch-conf
-FS_INIT_PATH=https://raw.github.com/newfies-dialer/newfies-dialer/$BRANCH/install/freeswitch-init
+FS_CONF_PATH=https://raw.github.com/13927729580/newfies-dialer/$BRANCH/install/freeswitch-conf
+FS_INIT_PATH=https://raw.github.com/13927729580/newfies-dialer/$BRANCH/install/freeswitch-init
 FS_CONFIG_PATH=/etc/freeswitch
 FS_BASE_PATH=/usr/src
 CURRENT_PATH=$PWD
