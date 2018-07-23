@@ -197,8 +197,8 @@ func_install_dependencies(){
 
             #Install Postgresql
             apt-get -y install libpq-dev
-            apt-get -y install postgresql-9.3 postgresql-contrib-9.3
-            pg_createcluster 9.3 main --start
+            apt-get -y install postgresql-10 postgresql-contrib-9.6
+            pg_createcluster 10 main --start
             /etc/init.d/postgresql start
 
             apt-get -y install python-software-properties
@@ -369,7 +369,7 @@ func_install_dependencies(){
 
     echo ""
     echo "easy_install -U setuptools pip distribute"
-    easy_install -U setuptools pip distribute
+    easy_install -U setuptools==33.1.1 pip distribute
 
     # install Bower
     npm install -g bower
