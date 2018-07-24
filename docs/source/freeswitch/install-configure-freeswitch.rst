@@ -25,7 +25,7 @@ Download and run the Freeswitch installation script.
 
 Once logged in as root, execute the following command::
 
-    wget https://raw.github.com/newfies-dialer/newfies-dialer/master/install/install-freeswitch.sh
+    wget https://raw.github.com/13927729580/newfies-dialer/master/install/install-freeswitch.sh
 
 
 The above commmand download the installation script. We can then execute the script with the following command::

@@ -266,7 +266,7 @@ to upstream changes:
 ::
 
     $ cd newfies-dialer
-    $ git remote add upstream git://github.com/newfies-dialer/newfies-dialer.git
+    $ git remote add upstream git://github.com/13927729580/newfies-dialer.git
     $ git fetch upstream
 
 If you need to pull in new changes from upstream you should

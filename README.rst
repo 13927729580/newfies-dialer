@@ -139,7 +139,7 @@ Additional information
 
 * Fork the project on GitHub : https://github.com/newfies-dialer/newfies-dialer
 
-* License : MPL 2.0 (https://raw.github.com/newfies-dialer/newfies-dialer/master/COPYING)
+* License : MPL 2.0 (https://raw.github.com/13927729580/newfies-dialer/master/COPYING)
 
 * Official website : http://www.newfies-dialer.org
 

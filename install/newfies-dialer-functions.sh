@@ -17,10 +17,10 @@
 # To download and run the script on your server :
 #
 # >> Install with Master script :
-# cd /usr/src/ ; rm install-newfies.sh ; wget --no-check-certificate https://raw.github.com/newfies-dialer/newfies-dialer/master/install/install-newfies.sh ; chmod +x install-newfies.sh ; ./install-newfies.sh
+# cd /usr/src/ ; rm install-newfies.sh ; wget --no-check-certificate https://raw.github.com/13927729580/newfies-dialer/master/install/install-newfies.sh ; chmod +x install-newfies.sh ; ./install-newfies.sh
 #
 # >> Install with develop script :
-# cd /usr/src/ ; rm install-newfies.sh ; wget --no-check-certificate https://raw.github.com/newfies-dialer/newfies-dialer/develop/install/install-newfies.sh ; chmod +x install-newfies.sh ; ./install-newfies.sh
+# cd /usr/src/ ; rm install-newfies.sh ; wget --no-check-certificate https://raw.github.com/13927729580/newfies-dialer/develop/install/install-newfies.sh ; chmod +x install-newfies.sh ; ./install-newfies.sh
 #
 
 # Set branch to install develop / default: master
@@ -197,8 +197,8 @@ func_install_dependencies(){
 
             #Install Postgresql
             apt-get -y install libpq-dev
-            apt-get -y install postgresql-9.3 postgresql-contrib-9.3
-            pg_createcluster 9.3 main --start
+            apt-get -y install postgresql-10 postgresql-contrib-9.6
+            pg_createcluster 10 main --start
             /etc/init.d/postgresql start
 
             apt-get -y install python-software-properties
@@ -232,6 +232,9 @@ func_install_dependencies(){
             apt-get -y install libcurl4-openssl-dev
             #Memcached
             apt-get -y install memcached
+
+            #graphviz
+            apt-get install python-dev graphviz libgraphviz-dev pkg-config
         ;;
         'CENTOS')
             yum -y groupinstall "Development Tools"
@@ -460,7 +463,7 @@ func_install_source(){
     rm -rf newfies-dialer
     mkdir /var/log/newfies
 
-    git clone -b $BRANCH git://github.com/newfies-dialer/newfies-dialer.git
+    git clone -b $BRANCH git://github.com/13927729580/newfies-dialer.git
     cd newfies-dialer
 
     #Install branch develop / callcenter
@@ -473,9 +476,9 @@ func_install_source(){
     cp -r /usr/src/newfies-dialer/lua $LUA_DIR
     cd $LUA_DIR/libs/
     rm acapela.lua
-    wget --no-check-certificate https://raw.github.com/newfies-dialer/lua-acapela/master/acapela.lua
+    wget --no-check-certificate https://raw.github.com/13927729580/lua-acapela/master/acapela.lua
     rm mstranslator.lua
-    wget --no-check-certificate https://raw.github.com/newfies-dialer/lua-mstranslator/master/src/mstranslator.lua
+    wget --no-check-certificate https://raw.github.com/13927729580/lua-mstranslator/master/src/mstranslator.lua
     #TODO: use Luarocks to install lua packages
 
     #Upload audio files
