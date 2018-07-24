@@ -234,7 +234,7 @@ func_install_dependencies(){
             apt-get -y install memcached
 
             #graphviz
-            apt-get install python-dev graphviz libgraphviz-dev pkg-config
+            apt-get -y install python-dev graphviz libgraphviz-dev pkg-config
         ;;
         'CENTOS')
             yum -y groupinstall "Development Tools"
@@ -372,7 +372,7 @@ func_install_dependencies(){
 
     echo ""
     echo "easy_install -U setuptools pip distribute"
-    easy_install -U setuptools pip distribute
+    easy_install -U setuptools==33.1.1 pip distribute
 
     # install Bower
     npm install -g bower
