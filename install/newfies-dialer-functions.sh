@@ -197,7 +197,7 @@ func_install_dependencies(){
 
             #Install Postgresql
             apt-get -y install libpq-dev
-            apt-get -y install postgresql-10 postgresql-contrib-9.6
+            apt-get -y install postgresql-10
             pg_createcluster 10 main --start
             /etc/init.d/postgresql start
 
