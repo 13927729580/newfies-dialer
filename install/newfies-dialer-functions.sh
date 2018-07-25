@@ -573,11 +573,11 @@ func_prepare_settings(){
     sed -i "s/DB_PORT/$DB_PORT/" /etc/odbc.ini
 
     IFCONFIG=`which ifconfig 2>/dev/null||echo /sbin/ifconfig`
-    IPADDR=`$IFCONFIG eth0|gawk '/inet addr/{print $2}'|gawk -F: '{print $2}'`
+    IPADDR=`$IFCONFIG eth1|gawk '/inet addr/{print $2}'|gawk -F: '{print $2}'`
     if [ -z "$IPADDR" ]; then
         #the following work on Docker container
         # ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'
-        IPADDR=`ip -4 -o addr show eth0 | cut -d ' ' -f 7 | cut -d '/' -f 1`
+        IPADDR=`ip -4 -o addr show eth1 | cut -d ' ' -f 7 | cut -d '/' -f 1`
         if [ -z "$IPADDR" ]; then
             clear
             echo "we have not detected your IP address automatically!"
@@ -918,7 +918,7 @@ func_install_rabbitmq() {
             if [ $chk -lt 1 ] ; then
                 echo "Setup new sources.list entries for RabbitMQ"
                 echo "deb http://www.rabbitmq.com/debian/ testing main" > /etc/apt/sources.list.d/rabbitmq.list
-                wget --no-check-certificate --quiet -O - http://www.rabbitmq.com/rabbitmq-signing-key-public.asc | apt-key add -
+                wget --no-check-certificate --quiet -O - https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | apt-key add -
             fi
             apt-get update
             apt-get -y install rabbitmq-server
