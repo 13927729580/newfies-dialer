@@ -127,6 +127,7 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
     'django.template.loaders.eggs.Loader',
+    'admin_tools.template_loaders.Loader',
 )
 
 
@@ -215,7 +216,7 @@ INSTALLED_APPS = (
     'dajaxice',
     'dajax',
     'dateutil',
-    #'linaro_django_pagination',
+    'linaro_django_pagination',
     # 'pagination',
     # 'memcache_status',
     'country_dialcode',
