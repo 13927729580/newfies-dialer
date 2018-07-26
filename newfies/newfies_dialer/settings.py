@@ -19,7 +19,8 @@ djcelery.setup_loader()
 
 # Django settings for project.
 DEBUG = False
-TEMPLATE_DEBUG = False
+#TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = True
 
 ADMINS = (
     ('Your Name', 'your_email@domain.com'),
@@ -214,7 +215,7 @@ INSTALLED_APPS = (
     'dajaxice',
     'dajax',
     'dateutil',
-    'linaro_django_pagination',
+    #'linaro_django_pagination',
     # 'pagination',
     # 'memcache_status',
     'country_dialcode',

@@ -6,7 +6,7 @@ var Dajax = {
         switch(elem.cmd)
         {
             case 'alert':
-                alert(elem.val)
+                alert(elem.val);
             break;
 
             case 'data':
