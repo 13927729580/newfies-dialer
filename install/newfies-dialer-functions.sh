@@ -215,6 +215,7 @@ func_install_dependencies(){
             apt-get -y install nodejs-legacy
             curl -sL https://deb.nodesource.com/setup | bash -
             apt-get install -y nodejs
+            apt-get install -y npm
 
             # cd /usr/src/ ; git clone https://github.com/joyent/node.git
             # # 'git tag' shows all available versions: select the latest stable.
